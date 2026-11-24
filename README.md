@@ -1,3 +1,4 @@
+<img width="1920" height="963" alt="image" src="https://github.com/user-attachments/assets/1ff3e275-7318-4251-bc9c-fe5087a59774" />
 # MiniDaw
 
 > A lightweight Digital Audio Workstation (DAW) for [briefly state your goal, e.g., sketching beats, sequencing MIDI/audio tracks, or experimenting with audio synthesis].
