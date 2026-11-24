@@ -1,0 +1,5675 @@
+{
+  "format": "patchgrid-project",
+  "version": 1,
+  "name": "Untitled Session",
+  "savedAt": "2026-11-24T12:56:30.597Z",
+  "bpm": 128,
+  "paletteId": "warehouse-obsidian",
+  "masterGain": 0.78,
+  "masterLimiter": {
+    "enabled": true,
+    "thresholdDb": -2,
+    "ceilingDb": -0.3,
+    "releaseMs": 75,
+    "driveDb": 0
+  },
+  "pitoEq": {
+    "enabled": true,
+    "autoTrackHarmonics": true,
+    "attackMs": 18,
+    "releaseMs": 180,
+    "bands": [
+      {
+        "id": 0,
+        "label": "F0 · 1×",
+        "harmonicMult": 1,
+        "freqHz": 130.81,
+        "gainDb": 1.5,
+        "q": 2.2,
+        "thresholdDb": -26,
+        "dynRangeDb": -4.5,
+        "enabled": true
+      },
+      {
+        "id": 1,
+        "label": "H2 · 2×",
+        "harmonicMult": 2,
+        "freqHz": 261.63,
+        "gainDb": 0.5,
+        "q": 2.6,
+        "thresholdDb": -28,
+        "dynRangeDb": 3.5,
+        "enabled": true
+      },
+      {
+        "id": 2,
+        "label": "H3 · 3×",
+        "harmonicMult": 3,
+        "freqHz": 392.44,
+        "gainDb": 0,
+        "q": 3,
+        "thresholdDb": -30,
+        "dynRangeDb": -5,
+        "enabled": true
+      },
+      {
+        "id": 3,
+        "label": "H4 · 4×",
+        "harmonicMult": 4,
+        "freqHz": 523.25,
+        "gainDb": 1,
+        "q": 2.8,
+        "thresholdDb": -32,
+        "dynRangeDb": 4,
+        "enabled": true
+      }
+    ]
+  },
+  "surfaceRig": {
+    "activePresetId": "preset-3xosc-fl",
+    "rigName": "3xOsc (FL Studio)",
+    "grid": {
+      "cols": 12,
+      "rows": 8
+    },
+    "tabs": [
+      {
+        "id": "tab-3xosc",
+        "label": "3xOsc"
+      },
+      {
+        "id": "tab-env",
+        "label": "Env · Filter · Pitch"
+      }
+    ],
+    "activeTabId": "tab-3xosc",
+    "modules": [
+      {
+        "id": "3x-osc1-inv",
+        "type": "toggle",
+        "label": "OSC 1 INV",
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 24,
+        "py": 24,
+        "pw": 78,
+        "ph": 74,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 20,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc1Invert"
+        },
+        "config": {
+          "momentary": false
+        },
+        "values": {
+          "primary": 0,
+          "active": false
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc1-wave",
+        "type": "selectbox",
+        "label": "OSC 1 Shape",
+        "x": 1,
+        "y": 0,
+        "w": 2,
+        "h": 1,
+        "px": 110,
+        "py": 24,
+        "pw": 148,
+        "ph": 74,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 21,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc1Wave"
+        },
+        "config": {
+          "options": [
+            {
+              "label": "Sine",
+              "value": 0
+            },
+            {
+              "label": "Triangle",
+              "value": 0.16666666666666666
+            },
+            {
+              "label": "Square",
+              "value": 0.3333333333333333
+            },
+            {
+              "label": "Saw",
+              "value": 0.5
+            },
+            {
+              "label": "Rounded Saw",
+              "value": 0.6666666666666666
+            },
+            {
+              "label": "Noise",
+              "value": 0.8333333333333334
+            },
+            {
+              "label": "Custom",
+              "value": 1
+            }
+          ]
+        },
+        "values": {
+          "primary": 0.5,
+          "selectedIndex": 3
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc1-coarse",
+        "type": "knob",
+        "label": "OSC1 Coarse",
+        "x": 3,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 266,
+        "py": 24,
+        "pw": 86,
+        "ph": 74,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 22,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc1Coarse"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "st"
+        },
+        "values": {
+          "primary": 0.5
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc1-fine",
+        "type": "knob",
+        "label": "OSC1 Fine",
+        "x": 4,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 360,
+        "py": 24,
+        "pw": 86,
+        "ph": 74,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 23,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc1Fine"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "ct"
+        },
+        "values": {
+          "primary": 0.5
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc1-phase",
+        "type": "knob",
+        "label": "OSC1 Phase",
+        "x": 5,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 454,
+        "py": 24,
+        "pw": 86,
+        "ph": 74,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 24,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc1Phase"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc1-detune",
+        "type": "knob",
+        "label": "OSC1 Detune",
+        "x": 6,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 548,
+        "py": 24,
+        "pw": 86,
+        "ph": 74,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 25,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc1Detune"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "ct"
+        },
+        "values": {
+          "primary": 0.5
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-phase-rand",
+        "tabId": "tab-3xosc",
+        "type": "knob",
+        "label": "Phase Rand",
+        "x": 7,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 642,
+        "py": 24,
+        "pw": 86,
+        "ph": 74,
+        "accent": "violet",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 50,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "phaseRand"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0
+        }
+      },
+      {
+        "id": "3x-osc2-inv",
+        "type": "toggle",
+        "label": "OSC 2 INV",
+        "x": 0,
+        "y": 1,
+        "w": 1,
+        "h": 1,
+        "px": 24,
+        "py": 108,
+        "pw": 78,
+        "ph": 74,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 30,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc2Invert"
+        },
+        "config": {
+          "momentary": false
+        },
+        "values": {
+          "primary": 0,
+          "active": false
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc2-wave",
+        "type": "selectbox",
+        "label": "OSC 2 Shape",
+        "x": 1,
+        "y": 1,
+        "w": 2,
+        "h": 1,
+        "px": 110,
+        "py": 108,
+        "pw": 148,
+        "ph": 74,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 31,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc2Wave"
+        },
+        "config": {
+          "options": [
+            {
+              "label": "Sine",
+              "value": 0
+            },
+            {
+              "label": "Triangle",
+              "value": 0.16666666666666666
+            },
+            {
+              "label": "Square",
+              "value": 0.3333333333333333
+            },
+            {
+              "label": "Saw",
+              "value": 0.5
+            },
+            {
+              "label": "Rounded Saw",
+              "value": 0.6666666666666666
+            },
+            {
+              "label": "Noise",
+              "value": 0.8333333333333334
+            },
+            {
+              "label": "Custom",
+              "value": 1
+            }
+          ]
+        },
+        "values": {
+          "primary": 0.5,
+          "selectedIndex": 3
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc2-coarse",
+        "type": "knob",
+        "label": "OSC2 Coarse",
+        "x": 3,
+        "y": 1,
+        "w": 1,
+        "h": 1,
+        "px": 266,
+        "py": 108,
+        "pw": 86,
+        "ph": 74,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 32,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc2Coarse"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "st"
+        },
+        "values": {
+          "primary": 0.25
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc2-fine",
+        "type": "knob",
+        "label": "OSC2 Fine",
+        "x": 4,
+        "y": 1,
+        "w": 1,
+        "h": 1,
+        "px": 360,
+        "py": 108,
+        "pw": 86,
+        "ph": 74,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 33,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc2Fine"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "ct"
+        },
+        "values": {
+          "primary": 0.54
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc2-phase",
+        "type": "knob",
+        "label": "OSC2 Phase",
+        "x": 5,
+        "y": 1,
+        "w": 1,
+        "h": 1,
+        "px": 454,
+        "py": 108,
+        "pw": 86,
+        "ph": 74,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 34,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc2Phase"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0.15
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc2-detune",
+        "type": "knob",
+        "label": "OSC2 Detune",
+        "x": 6,
+        "y": 1,
+        "w": 1,
+        "h": 1,
+        "px": 548,
+        "py": 108,
+        "pw": 86,
+        "ph": 74,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 35,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc2Detune"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "ct"
+        },
+        "values": {
+          "primary": 0.55
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc2-mix",
+        "type": "knob",
+        "label": "OSC2 Mix",
+        "x": 7,
+        "y": 1,
+        "w": 1,
+        "h": 1,
+        "px": 642,
+        "py": 108,
+        "pw": 86,
+        "ph": 74,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 36,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc2Mix"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0.55
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc3-inv",
+        "type": "toggle",
+        "label": "OSC 3 INV",
+        "x": 0,
+        "y": 2,
+        "w": 1,
+        "h": 1,
+        "px": 24,
+        "py": 192,
+        "pw": 78,
+        "ph": 74,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 40,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc3Invert"
+        },
+        "config": {
+          "momentary": false
+        },
+        "values": {
+          "primary": 0,
+          "active": false
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc3-wave",
+        "type": "selectbox",
+        "label": "OSC 3 Shape",
+        "x": 1,
+        "y": 2,
+        "w": 2,
+        "h": 1,
+        "px": 110,
+        "py": 192,
+        "pw": 148,
+        "ph": 74,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 41,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc3Wave"
+        },
+        "config": {
+          "options": [
+            {
+              "label": "Sine",
+              "value": 0
+            },
+            {
+              "label": "Triangle",
+              "value": 0.16666666666666666
+            },
+            {
+              "label": "Square",
+              "value": 0.3333333333333333
+            },
+            {
+              "label": "Saw",
+              "value": 0.5
+            },
+            {
+              "label": "Rounded Saw",
+              "value": 0.6666666666666666
+            },
+            {
+              "label": "Noise",
+              "value": 0.8333333333333334
+            },
+            {
+              "label": "Custom",
+              "value": 1
+            }
+          ]
+        },
+        "values": {
+          "primary": 0,
+          "selectedIndex": 0
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc3-coarse",
+        "type": "knob",
+        "label": "OSC3 Coarse",
+        "x": 3,
+        "y": 2,
+        "w": 1,
+        "h": 1,
+        "px": 266,
+        "py": 192,
+        "pw": 86,
+        "ph": 74,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 42,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc3Coarse"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "st"
+        },
+        "values": {
+          "primary": 0
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc3-fine",
+        "type": "knob",
+        "label": "OSC3 Fine",
+        "x": 4,
+        "y": 2,
+        "w": 1,
+        "h": 1,
+        "px": 360,
+        "py": 192,
+        "pw": 86,
+        "ph": 74,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 43,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc3Fine"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "ct"
+        },
+        "values": {
+          "primary": 0.5
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc3-phase",
+        "type": "knob",
+        "label": "OSC3 Phase",
+        "x": 5,
+        "y": 2,
+        "w": 1,
+        "h": 1,
+        "px": 454,
+        "py": 192,
+        "pw": 86,
+        "ph": 74,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 44,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc3Phase"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc3-detune",
+        "type": "knob",
+        "label": "OSC3 Detune",
+        "x": 6,
+        "y": 2,
+        "w": 1,
+        "h": 1,
+        "px": 548,
+        "py": 192,
+        "pw": 86,
+        "ph": 74,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 45,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc3Detune"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "ct"
+        },
+        "values": {
+          "primary": 0.5
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-osc3-mix",
+        "type": "knob",
+        "label": "OSC3 Mix",
+        "x": 7,
+        "y": 2,
+        "w": 1,
+        "h": 1,
+        "px": 642,
+        "py": 192,
+        "pw": 86,
+        "ph": 74,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 46,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "osc3Mix"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0.4
+        },
+        "tabId": "tab-3xosc"
+      },
+      {
+        "id": "3x-am-osc3",
+        "tabId": "tab-3xosc",
+        "type": "toggle",
+        "label": "AM (OSC 3)",
+        "x": 0,
+        "y": 3,
+        "w": 2,
+        "h": 1,
+        "px": 24,
+        "py": 278,
+        "pw": 112,
+        "ph": 74,
+        "accent": "rose",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 51,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "amOsc3"
+        },
+        "config": {
+          "momentary": false
+        },
+        "values": {
+          "primary": 0,
+          "active": false
+        }
+      },
+      {
+        "id": "3x-hq",
+        "tabId": "tab-3xosc",
+        "type": "toggle",
+        "label": "HQ PolyBLEP",
+        "x": 2,
+        "y": 3,
+        "w": 1,
+        "h": 1,
+        "px": 144,
+        "py": 278,
+        "pw": 114,
+        "ph": 74,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 52,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "hqMode"
+        },
+        "config": {
+          "momentary": false
+        },
+        "values": {
+          "primary": 1,
+          "active": true
+        }
+      },
+      {
+        "id": "3x-master",
+        "tabId": "tab-3xosc",
+        "type": "knob",
+        "label": "Master",
+        "x": 3,
+        "y": 3,
+        "w": 1,
+        "h": 1,
+        "px": 266,
+        "py": 278,
+        "pw": 86,
+        "ph": 74,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 7,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "masterGain"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0.78
+        }
+      },
+      {
+        "id": "3x-scope",
+        "tabId": "tab-3xosc",
+        "type": "scope",
+        "label": "3xOsc Waveform Scope",
+        "x": 4,
+        "y": 3,
+        "w": 4,
+        "h": 1,
+        "px": 360,
+        "py": 278,
+        "pw": 368,
+        "ph": 100,
+        "accent": "sky",
+        "midi": {
+          "enabled": false,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 0,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "none"
+        },
+        "config": {},
+        "values": {
+          "primary": 0
+        }
+      },
+      {
+        "id": "3x-keys",
+        "tabId": "tab-3xosc",
+        "type": "keyboard",
+        "label": "3xOsc Keys",
+        "x": 0,
+        "y": 5,
+        "w": 9,
+        "h": 2,
+        "px": 24,
+        "py": 390,
+        "pw": 704,
+        "ph": 152,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "note",
+          "ccNumber": 48,
+          "minValue": 20,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "noteTrigger"
+        },
+        "config": {
+          "octave": 3,
+          "octaves": 2,
+          "scale": "chromatic"
+        },
+        "values": {
+          "primary": 0
+        }
+      },
+      {
+        "id": "3x-env-pan",
+        "tabId": "tab-env",
+        "type": "knob",
+        "label": "Pan",
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 24,
+        "py": 24,
+        "pw": 96,
+        "ph": 84,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 10,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "pan"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0.5
+        }
+      },
+      {
+        "id": "3x-env-amp",
+        "tabId": "tab-env",
+        "type": "knob",
+        "label": "Amp",
+        "x": 1,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 132,
+        "py": 24,
+        "pw": 96,
+        "ph": 84,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 11,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "ampLevel"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0.85
+        }
+      },
+      {
+        "id": "3x-env-filter",
+        "tabId": "tab-env",
+        "type": "knob",
+        "label": "Filter",
+        "x": 2,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 240,
+        "py": 24,
+        "pw": 96,
+        "ph": 84,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 74,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "exponential",
+          "synthTarget": "cutoff"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "Hz"
+        },
+        "values": {
+          "primary": 0.82
+        }
+      },
+      {
+        "id": "3x-env-res",
+        "tabId": "tab-env",
+        "type": "knob",
+        "label": "Res",
+        "x": 3,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 348,
+        "py": 24,
+        "pw": 96,
+        "ph": 84,
+        "accent": "rose",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 71,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "resonance"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "Q"
+        },
+        "values": {
+          "primary": 0.18
+        }
+      },
+      {
+        "id": "3x-env-pitch",
+        "tabId": "tab-env",
+        "type": "knob",
+        "label": "Pitch",
+        "x": 4,
+        "y": 0,
+        "w": 1,
+        "h": 1,
+        "px": 456,
+        "py": 24,
+        "pw": 96,
+        "ph": 84,
+        "accent": "violet",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 55,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "masterPitch"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "st"
+        },
+        "values": {
+          "primary": 0.5
+        }
+      },
+      {
+        "id": "3x-env-adsr",
+        "tabId": "tab-env",
+        "type": "adsr",
+        "label": "ADSR Envelope Viewer",
+        "x": 0,
+        "y": 2,
+        "w": 6,
+        "h": 3,
+        "px": 24,
+        "py": 124,
+        "pw": 528,
+        "ph": 224,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 73,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "envAttack"
+        },
+        "config": {},
+        "values": {
+          "primary": 0.015,
+          "adsrTarget": "amp",
+          "adsr": {
+            "attack": 0.015,
+            "decay": 0.35,
+            "sustain": 0.72,
+            "release": 0.25,
+            "amount": 1,
+            "attackTension": 0,
+            "decayTension": 0,
+            "releaseTension": 0
+          },
+          "adsrEnvelopes": {
+            "amp": {
+              "attack": 0.015,
+              "decay": 0.35,
+              "sustain": 0.72,
+              "release": 0.25,
+              "amount": 1,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            },
+            "pan": {
+              "attack": 0.04,
+              "decay": 0.42,
+              "sustain": 0.5,
+              "release": 0.3,
+              "amount": 0.5,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            },
+            "filter": {
+              "attack": 0.02,
+              "decay": 0.38,
+              "sustain": 0.35,
+              "release": 0.28,
+              "amount": 0.72,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            },
+            "res": {
+              "attack": 0.03,
+              "decay": 0.32,
+              "sustain": 0.4,
+              "release": 0.25,
+              "amount": 0.5,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            },
+            "pitch": {
+              "attack": 0.01,
+              "decay": 0.18,
+              "sustain": 0,
+              "release": 0.15,
+              "amount": 0.5,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "3x-env-scope",
+        "tabId": "tab-env",
+        "type": "scope",
+        "label": "Output Scope",
+        "x": 6,
+        "y": 0,
+        "w": 3,
+        "h": 2,
+        "px": 572,
+        "py": 24,
+        "pw": 276,
+        "ph": 146,
+        "accent": "sky",
+        "midi": {
+          "enabled": false,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 0,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "none"
+        },
+        "config": {},
+        "values": {
+          "primary": 0
+        }
+      },
+      {
+        "id": "3x-env-filter-type",
+        "tabId": "tab-env",
+        "type": "switch",
+        "label": "Filter Type",
+        "x": 6,
+        "y": 2,
+        "w": 3,
+        "h": 1,
+        "px": 572,
+        "py": 184,
+        "pw": 276,
+        "ph": 78,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 75,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "filterType"
+        },
+        "config": {
+          "options": [
+            {
+              "label": "LP2",
+              "value": 0
+            },
+            {
+              "label": "LP4",
+              "value": 0.16666666666666666
+            },
+            {
+              "label": "HP2",
+              "value": 0.3333333333333333
+            },
+            {
+              "label": "HP4",
+              "value": 0.5
+            },
+            {
+              "label": "BP",
+              "value": 0.6666666666666666
+            },
+            {
+              "label": "COMB",
+              "value": 0.8333333333333334
+            },
+            {
+              "label": "KICK",
+              "value": 1
+            }
+          ]
+        },
+        "values": {
+          "primary": 0,
+          "selectedIndex": 0
+        }
+      },
+      {
+        "id": "3x-env-riser-pitch",
+        "tabId": "tab-env",
+        "type": "fader",
+        "label": "Riser Pitch",
+        "x": 9,
+        "y": 0,
+        "w": 1,
+        "h": 3,
+        "px": 862,
+        "py": 24,
+        "pw": 84,
+        "ph": 238,
+        "accent": "violet",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 56,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "riserPitch"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "st"
+        },
+        "values": {
+          "primary": 0.5
+        }
+      },
+      {
+        "id": "3x-env-phase-us",
+        "tabId": "tab-env",
+        "type": "knob",
+        "label": "Phase µs",
+        "x": 6,
+        "y": 3,
+        "w": 1,
+        "h": 1,
+        "px": 572,
+        "py": 274,
+        "pw": 92,
+        "ph": 76,
+        "accent": "sky",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 57,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "phaseDelayUs"
+        },
+        "config": {
+          "bipolar": true,
+          "unit": "µs"
+        },
+        "values": {
+          "primary": 0.5
+        }
+      },
+      {
+        "id": "3x-env-snap",
+        "tabId": "tab-env",
+        "type": "knob",
+        "label": "Snap",
+        "x": 7,
+        "y": 3,
+        "w": 1,
+        "h": 1,
+        "px": 670,
+        "py": 274,
+        "pw": 88,
+        "ph": 76,
+        "accent": "rose",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 58,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "transientSnap"
+        },
+        "config": {
+          "bipolar": false,
+          "unit": "%"
+        },
+        "values": {
+          "primary": 0
+        }
+      },
+      {
+        "id": "3x-env-noise-type",
+        "tabId": "tab-env",
+        "type": "switch",
+        "label": "Drum Noise",
+        "x": 8,
+        "y": 3,
+        "w": 2,
+        "h": 1,
+        "px": 764,
+        "py": 274,
+        "pw": 182,
+        "ph": 76,
+        "accent": "amber",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "cc",
+          "ccNumber": 59,
+          "minValue": 0,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "noiseType"
+        },
+        "config": {
+          "options": [
+            {
+              "label": "WHITE",
+              "value": 0
+            },
+            {
+              "label": "PINK",
+              "value": 0.2
+            },
+            {
+              "label": "BROWN",
+              "value": 0.4
+            },
+            {
+              "label": "BLUE",
+              "value": 0.6
+            },
+            {
+              "label": "VELVET",
+              "value": 0.8
+            },
+            {
+              "label": "808 MET",
+              "value": 1
+            }
+          ]
+        },
+        "values": {
+          "primary": 0,
+          "selectedIndex": 0
+        }
+      },
+      {
+        "id": "3x-env-keys",
+        "tabId": "tab-env",
+        "type": "keyboard",
+        "label": "3xOsc Keys",
+        "x": 0,
+        "y": 5,
+        "w": 10,
+        "h": 2,
+        "px": 24,
+        "py": 364,
+        "pw": 922,
+        "ph": 152,
+        "accent": "emerald",
+        "midi": {
+          "enabled": true,
+          "channel": 1,
+          "messageType": "note",
+          "ccNumber": 48,
+          "minValue": 20,
+          "maxValue": 127,
+          "curve": "linear",
+          "synthTarget": "noteTrigger"
+        },
+        "config": {
+          "octave": 3,
+          "octaves": 2,
+          "scale": "chromatic"
+        },
+        "values": {
+          "primary": 0
+        }
+      }
+    ],
+    "groups": []
+  },
+  "studioProject": {
+    "channels": [
+      {
+        "id": "ch-kick",
+        "name": "3xOsc Res Kick",
+        "accent": "rose",
+        "volume": 0.81,
+        "pan": 0.5,
+        "muted": false,
+        "solo": false,
+        "rootNote": 36,
+        "usePianoRoll": true,
+        "presetTag": "Custom Surface",
+        "mixerTrack": 1,
+        "params": {
+          "osc1": {
+            "wave": 2,
+            "invert": true,
+            "coarse": 0.8524832589285716,
+            "fine": 0.45108816964285714,
+            "phaseOffset": 0.5206194196428571,
+            "detune": 0.6248883928571429,
+            "mix": 1
+          },
+          "osc2": {
+            "wave": 0,
+            "invert": true,
+            "coarse": 0.6418247767857141,
+            "fine": 0.43839285714285714,
+            "phaseOffset": 0.13632812500000002,
+            "detune": 0.47781808035714285,
+            "mix": 0.8526506696428571
+          },
+          "osc3": {
+            "wave": 2,
+            "invert": true,
+            "coarse": 0.8206194196428571,
+            "fine": 0.5,
+            "phaseOffset": 0.5405412946428572,
+            "detune": 0.5,
+            "mix": 0.31766741071428567
+          },
+          "phaseRand": 0,
+          "amOsc3": false,
+          "hq": true,
+          "pan": 0.5,
+          "ampLevel": 0.8336774553571428,
+          "masterPitch": 0.14093191964285728,
+          "riserPitch": 0.5,
+          "phaseDelayUs": 0.5,
+          "noiseType": "white",
+          "transientSnap": 0,
+          "cutoff": 0.5489062499999997,
+          "resonance": 0.2766908482142857,
+          "filterType": "lp2",
+          "bpm": 128,
+          "envAttack": 0.002,
+          "envDecay": 0.236,
+          "envSustain": 0.18,
+          "envRelease": 0.132,
+          "envelopes": {
+            "amp": {
+              "attack": 0.002,
+              "decay": 0.236,
+              "sustain": 0.18,
+              "release": 0.132,
+              "amount": 1,
+              "attackTension": 0,
+              "decayTension": -0.2539275326173379,
+              "releaseTension": 0
+            },
+            "pan": {
+              "attack": 0.04,
+              "decay": 0.42,
+              "sustain": 0.5,
+              "release": 0.3,
+              "amount": 0.5,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            },
+            "filter": {
+              "attack": 0.127,
+              "decay": 0.401,
+              "sustain": 0.068,
+              "release": 0.207,
+              "amount": 0.165,
+              "attackTension": -0.6688103152778183,
+              "decayTension": -0.09115434803594807,
+              "releaseTension": 0
+            },
+            "res": {
+              "attack": 0.039,
+              "decay": 0.18296347045898437,
+              "sustain": 0,
+              "release": 0.374,
+              "amount": 0.997,
+              "attackTension": -0.5808729629907398,
+              "decayTension": -0.9559042778292398,
+              "releaseTension": 0
+            },
+            "pitch": {
+              "attack": 0.001,
+              "decay": 0.052,
+              "sustain": 0.088,
+              "release": 0.05,
+              "amount": 1,
+              "attackTension": 0,
+              "decayTension": -0.9559042778292398,
+              "releaseTension": 0
+            }
+          },
+          "adsrLfos": {
+            "amp": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            },
+            "pan": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            },
+            "filter": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            },
+            "res": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            },
+            "pitch": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            }
+          },
+          "sampler": {
+            "enabled": false,
+            "layerOscs": false,
+            "sampleId": "builtin-808-kick",
+            "sampleName": "808 Sub Kick.wav",
+            "durationSec": 0.85,
+            "sampleRate": 44100,
+            "rootMidi": 36,
+            "pitchTrack": true,
+            "playMode": "oneShot",
+            "startNorm": 0,
+            "endNorm": 1,
+            "loopStartNorm": 0.2,
+            "loopEndNorm": 0.85,
+            "crossfadeNorm": 0.04,
+            "fadeInNorm": 0,
+            "fadeOutNorm": 0.02,
+            "gain": 1,
+            "tuneSemi": 0,
+            "fineCents": 0,
+            "reverse": false,
+            "normalize": false
+          }
+        },
+        "surfaceTabs": [
+          {
+            "id": "tab-3xosc",
+            "label": "3xOsc"
+          },
+          {
+            "id": "tab-env",
+            "label": "Env · Filter · Pitch"
+          }
+        ],
+        "surfaceModules": [
+          {
+            "id": "3x-osc1-inv",
+            "type": "toggle",
+            "label": "OSC 1 INV",
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 24,
+            "py": 24,
+            "pw": 78,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 20,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Invert"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 1,
+              "active": true
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-wave",
+            "type": "selectbox",
+            "label": "OSC 1 Shape",
+            "x": 1,
+            "y": 0,
+            "w": 2,
+            "h": 1,
+            "px": 110,
+            "py": 24,
+            "pw": 148,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 21,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Wave"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "Sine",
+                  "value": 0
+                },
+                {
+                  "label": "Triangle",
+                  "value": 0.16666666666666666
+                },
+                {
+                  "label": "Square",
+                  "value": 0.3333333333333333
+                },
+                {
+                  "label": "Saw",
+                  "value": 0.5
+                },
+                {
+                  "label": "Rounded Saw",
+                  "value": 0.6666666666666666
+                },
+                {
+                  "label": "Noise",
+                  "value": 0.8333333333333334
+                },
+                {
+                  "label": "Custom",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0.3333333333333333,
+              "selectedIndex": 2
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-coarse",
+            "type": "knob",
+            "label": "OSC1 Coarse",
+            "x": 3,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 266,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 22,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Coarse"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.8524832589285716
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-fine",
+            "type": "knob",
+            "label": "OSC1 Fine",
+            "x": 4,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 360,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 23,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Fine"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.45108816964285714
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-phase",
+            "type": "knob",
+            "label": "OSC1 Phase",
+            "x": 5,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 454,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 24,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Phase"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.5206194196428571
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-detune",
+            "type": "knob",
+            "label": "OSC1 Detune",
+            "x": 6,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 548,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 25,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Detune"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.6248883928571429
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-phase-rand",
+            "tabId": "tab-3xosc",
+            "type": "knob",
+            "label": "Phase Rand",
+            "x": 7,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 642,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "violet",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 50,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "phaseRand"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-osc2-inv",
+            "type": "toggle",
+            "label": "OSC 2 INV",
+            "x": 0,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 24,
+            "py": 108,
+            "pw": 78,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 30,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Invert"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 1,
+              "active": true
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-wave",
+            "type": "selectbox",
+            "label": "OSC 2 Shape",
+            "x": 1,
+            "y": 1,
+            "w": 2,
+            "h": 1,
+            "px": 110,
+            "py": 108,
+            "pw": 148,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 31,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Wave"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "Sine",
+                  "value": 0
+                },
+                {
+                  "label": "Triangle",
+                  "value": 0.16666666666666666
+                },
+                {
+                  "label": "Square",
+                  "value": 0.3333333333333333
+                },
+                {
+                  "label": "Saw",
+                  "value": 0.5
+                },
+                {
+                  "label": "Rounded Saw",
+                  "value": 0.6666666666666666
+                },
+                {
+                  "label": "Noise",
+                  "value": 0.8333333333333334
+                },
+                {
+                  "label": "Custom",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0,
+              "selectedIndex": 0
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-coarse",
+            "type": "knob",
+            "label": "OSC2 Coarse",
+            "x": 3,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 266,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 32,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Coarse"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.6418247767857141
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-fine",
+            "type": "knob",
+            "label": "OSC2 Fine",
+            "x": 4,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 360,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 33,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Fine"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.43839285714285714
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-phase",
+            "type": "knob",
+            "label": "OSC2 Phase",
+            "x": 5,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 454,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 34,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Phase"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.13632812500000002
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-detune",
+            "type": "knob",
+            "label": "OSC2 Detune",
+            "x": 6,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 548,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 35,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Detune"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.47781808035714285
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-mix",
+            "type": "knob",
+            "label": "OSC2 Mix",
+            "x": 7,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 642,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 36,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Mix"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.8526506696428571
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-inv",
+            "type": "toggle",
+            "label": "OSC 3 INV",
+            "x": 0,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 24,
+            "py": 192,
+            "pw": 78,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 40,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Invert"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 1,
+              "active": true
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-wave",
+            "type": "selectbox",
+            "label": "OSC 3 Shape",
+            "x": 1,
+            "y": 2,
+            "w": 2,
+            "h": 1,
+            "px": 110,
+            "py": 192,
+            "pw": 148,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 41,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Wave"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "Sine",
+                  "value": 0
+                },
+                {
+                  "label": "Triangle",
+                  "value": 0.16666666666666666
+                },
+                {
+                  "label": "Square",
+                  "value": 0.3333333333333333
+                },
+                {
+                  "label": "Saw",
+                  "value": 0.5
+                },
+                {
+                  "label": "Rounded Saw",
+                  "value": 0.6666666666666666
+                },
+                {
+                  "label": "Noise",
+                  "value": 0.8333333333333334
+                },
+                {
+                  "label": "Custom",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0.3333333333333333,
+              "selectedIndex": 2
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-coarse",
+            "type": "knob",
+            "label": "OSC3 Coarse",
+            "x": 3,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 266,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 42,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Coarse"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.8206194196428571
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-fine",
+            "type": "knob",
+            "label": "OSC3 Fine",
+            "x": 4,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 360,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 43,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Fine"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.5
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-phase",
+            "type": "knob",
+            "label": "OSC3 Phase",
+            "x": 5,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 454,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 44,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Phase"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.5405412946428572
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-detune",
+            "type": "knob",
+            "label": "OSC3 Detune",
+            "x": 6,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 548,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 45,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Detune"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.5
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-mix",
+            "type": "knob",
+            "label": "OSC3 Mix",
+            "x": 7,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 642,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 46,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Mix"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.31766741071428567
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-am-osc3",
+            "tabId": "tab-3xosc",
+            "type": "toggle",
+            "label": "AM (OSC 3)",
+            "x": 0,
+            "y": 3,
+            "w": 2,
+            "h": 1,
+            "px": 24,
+            "py": 278,
+            "pw": 112,
+            "ph": 74,
+            "accent": "rose",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 51,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "amOsc3"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 0,
+              "active": false
+            }
+          },
+          {
+            "id": "3x-hq",
+            "tabId": "tab-3xosc",
+            "type": "toggle",
+            "label": "HQ PolyBLEP",
+            "x": 2,
+            "y": 3,
+            "w": 1,
+            "h": 1,
+            "px": 144,
+            "py": 278,
+            "pw": 114,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 52,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "hqMode"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 1,
+              "active": true
+            }
+          },
+          {
+            "id": "3x-master",
+            "tabId": "tab-3xosc",
+            "type": "knob",
+            "label": "Master",
+            "x": 3,
+            "y": 3,
+            "w": 1,
+            "h": 1,
+            "px": 266,
+            "py": 278,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 7,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "masterGain"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.78
+            }
+          },
+          {
+            "id": "3x-keys",
+            "tabId": "tab-3xosc",
+            "type": "keyboard",
+            "label": "3xOsc Keys",
+            "x": 0,
+            "y": 5,
+            "w": 9,
+            "h": 2,
+            "px": 24,
+            "py": 390,
+            "pw": 704,
+            "ph": 152,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "note",
+              "ccNumber": 48,
+              "minValue": 20,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "noteTrigger"
+            },
+            "config": {
+              "octave": 3,
+              "octaves": 2,
+              "scale": "chromatic"
+            },
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-env-pan",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Pan",
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 24,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 10,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "pan"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.5
+            }
+          },
+          {
+            "id": "3x-env-amp",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Amp",
+            "x": 1,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 132,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 11,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "ampLevel"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.8336774553571428
+            }
+          },
+          {
+            "id": "3x-env-filter",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Filter",
+            "x": 2,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 240,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 74,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "exponential",
+              "synthTarget": "cutoff"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "Hz"
+            },
+            "values": {
+              "primary": 0.5489062499999997
+            }
+          },
+          {
+            "id": "3x-env-res",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Res",
+            "x": 3,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 348,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "rose",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 71,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "resonance"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "Q"
+            },
+            "values": {
+              "primary": 0.2766908482142857
+            }
+          },
+          {
+            "id": "3x-env-pitch",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Pitch",
+            "x": 4,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 456,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "violet",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 55,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "masterPitch"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.14093191964285728
+            }
+          },
+          {
+            "id": "3x-env-adsr",
+            "tabId": "tab-env",
+            "type": "adsr",
+            "label": "ADSR Envelope Viewer",
+            "x": 0,
+            "y": 2,
+            "w": 6,
+            "h": 3,
+            "px": 24,
+            "py": 124,
+            "pw": 528,
+            "ph": 224,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 73,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "envAttack"
+            },
+            "config": {},
+            "values": {
+              "primary": 0.207,
+              "adsrTarget": "filter",
+              "adsr": {
+                "attack": 0.002,
+                "decay": 0.236,
+                "sustain": 0.18,
+                "release": 0.132,
+                "amount": 1,
+                "attackTension": 0,
+                "decayTension": -0.2539275326173379,
+                "releaseTension": 0
+              },
+              "adsrEnvelopes": {
+                "amp": {
+                  "attack": 0.002,
+                  "decay": 0.236,
+                  "sustain": 0.18,
+                  "release": 0.132,
+                  "amount": 1,
+                  "attackTension": 0,
+                  "decayTension": -0.2539275326173379,
+                  "releaseTension": 0
+                },
+                "pan": {
+                  "attack": 0.04,
+                  "decay": 0.42,
+                  "sustain": 0.5,
+                  "release": 0.3,
+                  "amount": 0.5,
+                  "attackTension": 0,
+                  "decayTension": 0,
+                  "releaseTension": 0
+                },
+                "filter": {
+                  "attack": 0.127,
+                  "decay": 0.401,
+                  "sustain": 0.068,
+                  "release": 0.207,
+                  "amount": 0.165,
+                  "attackTension": -0.6688103152778183,
+                  "decayTension": -0.09115434803594807,
+                  "releaseTension": 0
+                },
+                "res": {
+                  "attack": 0.039,
+                  "decay": 0.18296347045898437,
+                  "sustain": 0,
+                  "release": 0.374,
+                  "amount": 0.997,
+                  "attackTension": -0.5808729629907398,
+                  "decayTension": -0.9559042778292398,
+                  "releaseTension": 0
+                },
+                "pitch": {
+                  "attack": 0.001,
+                  "decay": 0.052,
+                  "sustain": 0.088,
+                  "release": 0.05,
+                  "amount": 1,
+                  "attackTension": 0,
+                  "decayTension": -0.9559042778292398,
+                  "releaseTension": 0
+                }
+              },
+              "adsrLfos": {
+                "amp": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                },
+                "pan": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                },
+                "filter": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                },
+                "res": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                },
+                "pitch": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "3x-env-scope",
+            "tabId": "tab-env",
+            "type": "scope",
+            "label": "Output Scope",
+            "x": 6,
+            "y": 0,
+            "w": 3,
+            "h": 2,
+            "px": 572,
+            "py": 24,
+            "pw": 276,
+            "ph": 146,
+            "accent": "sky",
+            "midi": {
+              "enabled": false,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "none"
+            },
+            "config": {},
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-env-filter-type",
+            "tabId": "tab-env",
+            "type": "switch",
+            "label": "Filter Type",
+            "x": 6,
+            "y": 2,
+            "w": 3,
+            "h": 1,
+            "px": 572,
+            "py": 184,
+            "pw": 276,
+            "ph": 78,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 75,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "filterType"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "LP2",
+                  "value": 0
+                },
+                {
+                  "label": "LP4",
+                  "value": 0.16666666666666666
+                },
+                {
+                  "label": "HP2",
+                  "value": 0.3333333333333333
+                },
+                {
+                  "label": "HP4",
+                  "value": 0.5
+                },
+                {
+                  "label": "BP",
+                  "value": 0.6666666666666666
+                },
+                {
+                  "label": "COMB",
+                  "value": 0.8333333333333334
+                },
+                {
+                  "label": "KICK",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0,
+              "selectedIndex": 0
+            }
+          },
+          {
+            "id": "3x-env-riser-pitch",
+            "tabId": "tab-env",
+            "type": "fader",
+            "label": "Riser Pitch",
+            "x": 9,
+            "y": 0,
+            "w": 1,
+            "h": 3,
+            "px": 862,
+            "py": 24,
+            "pw": 84,
+            "ph": 238,
+            "accent": "violet",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 56,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "riserPitch"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.5
+            }
+          },
+          {
+            "id": "3x-env-phase-us",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Phase µs",
+            "x": 6,
+            "y": 3,
+            "w": 1,
+            "h": 1,
+            "px": 572,
+            "py": 274,
+            "pw": 92,
+            "ph": 76,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 57,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "phaseDelayUs"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "µs"
+            },
+            "values": {
+              "primary": 0.5
+            }
+          },
+          {
+            "id": "3x-env-snap",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Snap",
+            "x": 7,
+            "y": 3,
+            "w": 1,
+            "h": 1,
+            "px": 670,
+            "py": 274,
+            "pw": 88,
+            "ph": 76,
+            "accent": "rose",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 58,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "transientSnap"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-env-noise-type",
+            "tabId": "tab-env",
+            "type": "switch",
+            "label": "Drum Noise",
+            "x": 8,
+            "y": 3,
+            "w": 2,
+            "h": 1,
+            "px": 764,
+            "py": 274,
+            "pw": 182,
+            "ph": 76,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 59,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "noiseType"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "WHITE",
+                  "value": 0
+                },
+                {
+                  "label": "PINK",
+                  "value": 0.2
+                },
+                {
+                  "label": "BROWN",
+                  "value": 0.4
+                },
+                {
+                  "label": "BLUE",
+                  "value": 0.6
+                },
+                {
+                  "label": "VELVET",
+                  "value": 0.8
+                },
+                {
+                  "label": "808 MET",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0,
+              "selectedIndex": 0
+            }
+          },
+          {
+            "id": "3x-env-keys",
+            "tabId": "tab-env",
+            "type": "keyboard",
+            "label": "3xOsc Keys",
+            "x": 0,
+            "y": 5,
+            "w": 10,
+            "h": 2,
+            "px": 24,
+            "py": 364,
+            "pw": 922,
+            "ph": 152,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "note",
+              "ccNumber": 48,
+              "minValue": 20,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "noteTrigger"
+            },
+            "config": {
+              "octave": 3,
+              "octaves": 2,
+              "scale": "chromatic"
+            },
+            "values": {
+              "primary": 0
+            }
+          }
+        ],
+        "surfaceGroups": []
+      },
+      {
+        "id": "ch-bass",
+        "name": "3xOsc Sub Bass",
+        "accent": "emerald",
+        "volume": 0.395,
+        "pan": 0.5,
+        "muted": false,
+        "solo": false,
+        "rootNote": 36,
+        "usePianoRoll": true,
+        "presetTag": "Custom Surface",
+        "mixerTrack": 2,
+        "params": {
+          "osc1": {
+            "wave": 0,
+            "invert": false,
+            "coarse": 0.4987165178571429,
+            "fine": 0.4779017857142857,
+            "phaseOffset": 0.48111049107142856,
+            "detune": 0.47873883928571437,
+            "mix": 1
+          },
+          "osc2": {
+            "wave": 3,
+            "invert": false,
+            "coarse": 0.7445591517857143,
+            "fine": 0.52,
+            "phaseOffset": 0.1,
+            "detune": 0.4388727678571429,
+            "mix": 0.3922935267857142
+          },
+          "osc3": {
+            "wave": 2,
+            "invert": false,
+            "coarse": 1,
+            "fine": 0.5,
+            "phaseOffset": 0,
+            "detune": 0.5030412946428572,
+            "mix": 0.74453125
+          },
+          "phaseRand": 0,
+          "amOsc3": true,
+          "hq": false,
+          "pan": 0.5,
+          "ampLevel": 1,
+          "masterPitch": 0.4991629464285714,
+          "riserPitch": 0.5,
+          "phaseDelayUs": 0.5,
+          "noiseType": "white",
+          "transientSnap": 0,
+          "cutoff": 0.11769531249999998,
+          "resonance": 0.5993917410714288,
+          "filterType": "lp4",
+          "bpm": 128,
+          "envAttack": 0.008,
+          "envDecay": 0.198,
+          "envSustain": 0.16,
+          "envRelease": 0.16,
+          "envelopes": {
+            "amp": {
+              "attack": 0.008,
+              "decay": 0.198,
+              "sustain": 0.16,
+              "release": 0.16,
+              "amount": 1,
+              "attackTension": 0,
+              "decayTension": -0.9559042778292398,
+              "releaseTension": 0
+            },
+            "pan": {
+              "attack": 0.04,
+              "decay": 0.42,
+              "sustain": 0.5,
+              "release": 0.3,
+              "amount": 0.5,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            },
+            "filter": {
+              "attack": 0.001,
+              "decay": 0.26,
+              "sustain": 0.056,
+              "release": 0.16,
+              "amount": 0.684,
+              "attackTension": 0,
+              "decayTension": -0.9559042778292398,
+              "releaseTension": 0
+            },
+            "res": {
+              "attack": 0.077,
+              "decay": 0.32,
+              "sustain": 0.4,
+              "release": 0.25,
+              "amount": 0.558,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            },
+            "pitch": {
+              "attack": 0.01,
+              "decay": 0.18,
+              "sustain": 0,
+              "release": 0.15,
+              "amount": 0.5,
+              "attackTension": 0,
+              "decayTension": 0,
+              "releaseTension": 0
+            }
+          },
+          "adsrLfos": {
+            "amp": {
+              "enabled": true,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0,
+              "amount": 0.011,
+              "speed": 0.32,
+              "tempoSync": true,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            },
+            "pan": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            },
+            "filter": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            },
+            "res": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            },
+            "pitch": {
+              "enabled": false,
+              "wave": "sine",
+              "predelay": 0,
+              "attack": 0.08,
+              "amount": 0.5,
+              "speed": 0.32,
+              "tempoSync": false,
+              "syncDiv": "1/4",
+              "global": true,
+              "curveTension": 0
+            }
+          }
+        },
+        "surfaceTabs": [
+          {
+            "id": "tab-3xosc",
+            "label": "3xOsc"
+          },
+          {
+            "id": "tab-env",
+            "label": "Env · Filter · Pitch"
+          }
+        ],
+        "surfaceModules": [
+          {
+            "id": "3x-osc1-inv",
+            "type": "toggle",
+            "label": "OSC 1 INV",
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 24,
+            "py": 24,
+            "pw": 78,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 20,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Invert"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 0,
+              "active": false
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-wave",
+            "type": "selectbox",
+            "label": "OSC 1 Shape",
+            "x": 1,
+            "y": 0,
+            "w": 2,
+            "h": 1,
+            "px": 110,
+            "py": 24,
+            "pw": 148,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 21,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Wave"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "Sine",
+                  "value": 0
+                },
+                {
+                  "label": "Triangle",
+                  "value": 0.16666666666666666
+                },
+                {
+                  "label": "Square",
+                  "value": 0.3333333333333333
+                },
+                {
+                  "label": "Saw",
+                  "value": 0.5
+                },
+                {
+                  "label": "Rounded Saw",
+                  "value": 0.6666666666666666
+                },
+                {
+                  "label": "Noise",
+                  "value": 0.8333333333333334
+                },
+                {
+                  "label": "Custom",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0,
+              "selectedIndex": 0
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-coarse",
+            "type": "knob",
+            "label": "OSC1 Coarse",
+            "x": 3,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 266,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 22,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Coarse"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.4987165178571429
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-fine",
+            "type": "knob",
+            "label": "OSC1 Fine",
+            "x": 4,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 360,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 23,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Fine"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.4779017857142857
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-phase",
+            "type": "knob",
+            "label": "OSC1 Phase",
+            "x": 5,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 454,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 24,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Phase"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.48111049107142856
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc1-detune",
+            "type": "knob",
+            "label": "OSC1 Detune",
+            "x": 6,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 548,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 25,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc1Detune"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.47873883928571437
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-phase-rand",
+            "tabId": "tab-3xosc",
+            "type": "knob",
+            "label": "Phase Rand",
+            "x": 7,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 642,
+            "py": 24,
+            "pw": 86,
+            "ph": 74,
+            "accent": "violet",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 50,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "phaseRand"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-osc2-inv",
+            "type": "toggle",
+            "label": "OSC 2 INV",
+            "x": 0,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 24,
+            "py": 108,
+            "pw": 78,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 30,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Invert"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 0,
+              "active": false
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-wave",
+            "type": "selectbox",
+            "label": "OSC 2 Shape",
+            "x": 1,
+            "y": 1,
+            "w": 2,
+            "h": 1,
+            "px": 110,
+            "py": 108,
+            "pw": 148,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 31,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Wave"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "Sine",
+                  "value": 0
+                },
+                {
+                  "label": "Triangle",
+                  "value": 0.16666666666666666
+                },
+                {
+                  "label": "Square",
+                  "value": 0.3333333333333333
+                },
+                {
+                  "label": "Saw",
+                  "value": 0.5
+                },
+                {
+                  "label": "Rounded Saw",
+                  "value": 0.6666666666666666
+                },
+                {
+                  "label": "Noise",
+                  "value": 0.8333333333333334
+                },
+                {
+                  "label": "Custom",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0.5,
+              "selectedIndex": 3
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-coarse",
+            "type": "knob",
+            "label": "OSC2 Coarse",
+            "x": 3,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 266,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 32,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Coarse"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.7445591517857143
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-fine",
+            "type": "knob",
+            "label": "OSC2 Fine",
+            "x": 4,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 360,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 33,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Fine"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.52
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-phase",
+            "type": "knob",
+            "label": "OSC2 Phase",
+            "x": 5,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 454,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 34,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Phase"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.1
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-detune",
+            "type": "knob",
+            "label": "OSC2 Detune",
+            "x": 6,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 548,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 35,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Detune"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.4388727678571429
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc2-mix",
+            "type": "knob",
+            "label": "OSC2 Mix",
+            "x": 7,
+            "y": 1,
+            "w": 1,
+            "h": 1,
+            "px": 642,
+            "py": 108,
+            "pw": 86,
+            "ph": 74,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 36,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc2Mix"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.3922935267857142
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-inv",
+            "type": "toggle",
+            "label": "OSC 3 INV",
+            "x": 0,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 24,
+            "py": 192,
+            "pw": 78,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 40,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Invert"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 0,
+              "active": false
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-wave",
+            "type": "selectbox",
+            "label": "OSC 3 Shape",
+            "x": 1,
+            "y": 2,
+            "w": 2,
+            "h": 1,
+            "px": 110,
+            "py": 192,
+            "pw": 148,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 41,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Wave"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "Sine",
+                  "value": 0
+                },
+                {
+                  "label": "Triangle",
+                  "value": 0.16666666666666666
+                },
+                {
+                  "label": "Square",
+                  "value": 0.3333333333333333
+                },
+                {
+                  "label": "Saw",
+                  "value": 0.5
+                },
+                {
+                  "label": "Rounded Saw",
+                  "value": 0.6666666666666666
+                },
+                {
+                  "label": "Noise",
+                  "value": 0.8333333333333334
+                },
+                {
+                  "label": "Custom",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0.3333333333333333,
+              "selectedIndex": 2
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-coarse",
+            "type": "knob",
+            "label": "OSC3 Coarse",
+            "x": 3,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 266,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 42,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Coarse"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 1
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-fine",
+            "type": "knob",
+            "label": "OSC3 Fine",
+            "x": 4,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 360,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 43,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Fine"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.5
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-phase",
+            "type": "knob",
+            "label": "OSC3 Phase",
+            "x": 5,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 454,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 44,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Phase"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-detune",
+            "type": "knob",
+            "label": "OSC3 Detune",
+            "x": 6,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 548,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 45,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Detune"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "ct"
+            },
+            "values": {
+              "primary": 0.5030412946428572
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-osc3-mix",
+            "type": "knob",
+            "label": "OSC3 Mix",
+            "x": 7,
+            "y": 2,
+            "w": 1,
+            "h": 1,
+            "px": 642,
+            "py": 192,
+            "pw": 86,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 46,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "osc3Mix"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.74453125
+            },
+            "tabId": "tab-3xosc"
+          },
+          {
+            "id": "3x-am-osc3",
+            "tabId": "tab-3xosc",
+            "type": "toggle",
+            "label": "AM (OSC 3)",
+            "x": 0,
+            "y": 3,
+            "w": 2,
+            "h": 1,
+            "px": 24,
+            "py": 278,
+            "pw": 112,
+            "ph": 74,
+            "accent": "rose",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 51,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "amOsc3"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 1,
+              "active": true
+            }
+          },
+          {
+            "id": "3x-hq",
+            "tabId": "tab-3xosc",
+            "type": "toggle",
+            "label": "HQ PolyBLEP",
+            "x": 2,
+            "y": 3,
+            "w": 1,
+            "h": 1,
+            "px": 144,
+            "py": 278,
+            "pw": 114,
+            "ph": 74,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 52,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "hqMode"
+            },
+            "config": {
+              "momentary": false
+            },
+            "values": {
+              "primary": 0,
+              "active": false
+            }
+          },
+          {
+            "id": "3x-master",
+            "tabId": "tab-3xosc",
+            "type": "knob",
+            "label": "Master",
+            "x": 3,
+            "y": 3,
+            "w": 1,
+            "h": 1,
+            "px": 266,
+            "py": 278,
+            "pw": 86,
+            "ph": 74,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 7,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "masterGain"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.78
+            }
+          },
+          {
+            "id": "3x-scope",
+            "tabId": "tab-3xosc",
+            "type": "scope",
+            "label": "3xOsc Waveform Scope",
+            "x": 4,
+            "y": 3,
+            "w": 4,
+            "h": 1,
+            "px": 360,
+            "py": 278,
+            "pw": 368,
+            "ph": 100,
+            "accent": "sky",
+            "midi": {
+              "enabled": false,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "none"
+            },
+            "config": {},
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-keys",
+            "tabId": "tab-3xosc",
+            "type": "keyboard",
+            "label": "3xOsc Keys",
+            "x": 0,
+            "y": 5,
+            "w": 9,
+            "h": 2,
+            "px": 24,
+            "py": 390,
+            "pw": 704,
+            "ph": 152,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "note",
+              "ccNumber": 48,
+              "minValue": 20,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "noteTrigger"
+            },
+            "config": {
+              "octave": 3,
+              "octaves": 2,
+              "scale": "chromatic"
+            },
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-env-pan",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Pan",
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 24,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 10,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "pan"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0.5
+            }
+          },
+          {
+            "id": "3x-env-amp",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Amp",
+            "x": 1,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 132,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 11,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "ampLevel"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 1
+            }
+          },
+          {
+            "id": "3x-env-filter",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Filter",
+            "x": 2,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 240,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 74,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "exponential",
+              "synthTarget": "cutoff"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "Hz"
+            },
+            "values": {
+              "primary": 0.11769531249999998
+            }
+          },
+          {
+            "id": "3x-env-res",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Res",
+            "x": 3,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 348,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "rose",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 71,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "resonance"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "Q"
+            },
+            "values": {
+              "primary": 0.5993917410714288
+            }
+          },
+          {
+            "id": "3x-env-pitch",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Pitch",
+            "x": 4,
+            "y": 0,
+            "w": 1,
+            "h": 1,
+            "px": 456,
+            "py": 24,
+            "pw": 96,
+            "ph": 84,
+            "accent": "violet",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 55,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "masterPitch"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.4991629464285714
+            }
+          },
+          {
+            "id": "3x-env-adsr",
+            "tabId": "tab-env",
+            "type": "adsr",
+            "label": "ADSR Envelope Viewer",
+            "x": 0,
+            "y": 2,
+            "w": 6,
+            "h": 3,
+            "px": 24,
+            "py": 124,
+            "pw": 528,
+            "ph": 224,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 73,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "envAttack"
+            },
+            "config": {},
+            "values": {
+              "primary": 0.198,
+              "adsrTarget": "amp",
+              "adsr": {
+                "attack": 0.008,
+                "decay": 0.198,
+                "sustain": 0.16,
+                "release": 0.16,
+                "amount": 1,
+                "attackTension": 0,
+                "decayTension": -0.9559042778292398,
+                "releaseTension": 0
+              },
+              "adsrEnvelopes": {
+                "amp": {
+                  "attack": 0.008,
+                  "decay": 0.198,
+                  "sustain": 0.16,
+                  "release": 0.16,
+                  "amount": 1,
+                  "attackTension": 0,
+                  "decayTension": -0.9559042778292398,
+                  "releaseTension": 0
+                },
+                "pan": {
+                  "attack": 0.04,
+                  "decay": 0.42,
+                  "sustain": 0.5,
+                  "release": 0.3,
+                  "amount": 0.5,
+                  "attackTension": 0,
+                  "decayTension": 0,
+                  "releaseTension": 0
+                },
+                "filter": {
+                  "attack": 0.001,
+                  "decay": 0.26,
+                  "sustain": 0.056,
+                  "release": 0.16,
+                  "amount": 0.684,
+                  "attackTension": 0,
+                  "decayTension": -0.9559042778292398,
+                  "releaseTension": 0
+                },
+                "res": {
+                  "attack": 0.077,
+                  "decay": 0.32,
+                  "sustain": 0.4,
+                  "release": 0.25,
+                  "amount": 0.558,
+                  "attackTension": 0,
+                  "decayTension": 0,
+                  "releaseTension": 0
+                },
+                "pitch": {
+                  "attack": 0.01,
+                  "decay": 0.18,
+                  "sustain": 0,
+                  "release": 0.15,
+                  "amount": 0.5,
+                  "attackTension": 0,
+                  "decayTension": 0,
+                  "releaseTension": 0
+                }
+              },
+              "adsrLfos": {
+                "amp": {
+                  "enabled": true,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0,
+                  "amount": 0.011,
+                  "speed": 0.32,
+                  "tempoSync": true,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                },
+                "pan": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                },
+                "filter": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                },
+                "res": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                },
+                "pitch": {
+                  "enabled": false,
+                  "wave": "sine",
+                  "predelay": 0,
+                  "attack": 0.08,
+                  "amount": 0.5,
+                  "speed": 0.32,
+                  "tempoSync": false,
+                  "syncDiv": "1/4",
+                  "global": true,
+                  "curveTension": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "3x-env-scope",
+            "tabId": "tab-env",
+            "type": "scope",
+            "label": "Output Scope",
+            "x": 6,
+            "y": 0,
+            "w": 3,
+            "h": 2,
+            "px": 572,
+            "py": 24,
+            "pw": 276,
+            "ph": 146,
+            "accent": "sky",
+            "midi": {
+              "enabled": false,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "none"
+            },
+            "config": {},
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-env-filter-type",
+            "tabId": "tab-env",
+            "type": "switch",
+            "label": "Filter Type",
+            "x": 6,
+            "y": 2,
+            "w": 3,
+            "h": 1,
+            "px": 572,
+            "py": 184,
+            "pw": 276,
+            "ph": 78,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 75,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "filterType"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "LP2",
+                  "value": 0
+                },
+                {
+                  "label": "LP4",
+                  "value": 0.16666666666666666
+                },
+                {
+                  "label": "HP2",
+                  "value": 0.3333333333333333
+                },
+                {
+                  "label": "HP4",
+                  "value": 0.5
+                },
+                {
+                  "label": "BP",
+                  "value": 0.6666666666666666
+                },
+                {
+                  "label": "COMB",
+                  "value": 0.8333333333333334
+                },
+                {
+                  "label": "KICK",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0.16666666666666666,
+              "selectedIndex": 1
+            }
+          },
+          {
+            "id": "3x-env-riser-pitch",
+            "tabId": "tab-env",
+            "type": "fader",
+            "label": "Riser Pitch",
+            "x": 9,
+            "y": 0,
+            "w": 1,
+            "h": 3,
+            "px": 862,
+            "py": 24,
+            "pw": 84,
+            "ph": 238,
+            "accent": "violet",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 56,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "riserPitch"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "st"
+            },
+            "values": {
+              "primary": 0.5
+            }
+          },
+          {
+            "id": "3x-env-phase-us",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Phase µs",
+            "x": 6,
+            "y": 3,
+            "w": 1,
+            "h": 1,
+            "px": 572,
+            "py": 274,
+            "pw": 92,
+            "ph": 76,
+            "accent": "sky",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 57,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "phaseDelayUs"
+            },
+            "config": {
+              "bipolar": true,
+              "unit": "µs"
+            },
+            "values": {
+              "primary": 0.5
+            }
+          },
+          {
+            "id": "3x-env-snap",
+            "tabId": "tab-env",
+            "type": "knob",
+            "label": "Snap",
+            "x": 7,
+            "y": 3,
+            "w": 1,
+            "h": 1,
+            "px": 670,
+            "py": 274,
+            "pw": 88,
+            "ph": 76,
+            "accent": "rose",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 58,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "transientSnap"
+            },
+            "config": {
+              "bipolar": false,
+              "unit": "%"
+            },
+            "values": {
+              "primary": 0
+            }
+          },
+          {
+            "id": "3x-env-noise-type",
+            "tabId": "tab-env",
+            "type": "switch",
+            "label": "Drum Noise",
+            "x": 8,
+            "y": 3,
+            "w": 2,
+            "h": 1,
+            "px": 764,
+            "py": 274,
+            "pw": 182,
+            "ph": 76,
+            "accent": "amber",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "cc",
+              "ccNumber": 59,
+              "minValue": 0,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "noiseType"
+            },
+            "config": {
+              "options": [
+                {
+                  "label": "WHITE",
+                  "value": 0
+                },
+                {
+                  "label": "PINK",
+                  "value": 0.2
+                },
+                {
+                  "label": "BROWN",
+                  "value": 0.4
+                },
+                {
+                  "label": "BLUE",
+                  "value": 0.6
+                },
+                {
+                  "label": "VELVET",
+                  "value": 0.8
+                },
+                {
+                  "label": "808 MET",
+                  "value": 1
+                }
+              ]
+            },
+            "values": {
+              "primary": 0,
+              "selectedIndex": 0
+            }
+          },
+          {
+            "id": "3x-env-keys",
+            "tabId": "tab-env",
+            "type": "keyboard",
+            "label": "3xOsc Keys",
+            "x": 0,
+            "y": 5,
+            "w": 10,
+            "h": 2,
+            "px": 24,
+            "py": 364,
+            "pw": 922,
+            "ph": 152,
+            "accent": "emerald",
+            "midi": {
+              "enabled": true,
+              "channel": 1,
+              "messageType": "note",
+              "ccNumber": 48,
+              "minValue": 20,
+              "maxValue": 127,
+              "curve": "linear",
+              "synthTarget": "noteTrigger"
+            },
+            "config": {
+              "octave": 3,
+              "octaves": 2,
+              "scale": "chromatic"
+            },
+            "values": {
+              "primary": 0
+            }
+          }
+        ],
+        "surfaceGroups": []
+      }
+    ],
+    "patterns": [
+      {
+        "id": "pat-1",
+        "name": "Pattern 1 · Main Groove",
+        "stepsCount": 16,
+        "steps": {
+          "ch-kick": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          "ch-bass": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "ch-lead": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "ch-pluck": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          "ch-mwuice88-a2l": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "ch-mwuicfou-nhz": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        "notes": {
+          "ch-bass": [
+            {
+              "id": "n-b1",
+              "pitch": 36,
+              "startStep": 2,
+              "durationSteps": 1,
+              "velocity": 0.88
+            },
+            {
+              "id": "n-b2",
+              "pitch": 36,
+              "startStep": 6,
+              "durationSteps": 1,
+              "velocity": 0.82
+            },
+            {
+              "id": "n-b3",
+              "pitch": 36,
+              "startStep": 10,
+              "durationSteps": 1,
+              "velocity": 0.86
+            },
+            {
+              "id": "pr-mwui8yf2-0-yoi",
+              "pitch": 36,
+              "startStep": 14,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwui9fw1-0-qld",
+              "pitch": 24,
+              "startStep": 0,
+              "durationSteps": 2,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwui9i9i-0-wi0",
+              "pitch": 24,
+              "startStep": 4,
+              "durationSteps": 2,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwui9joy-0-qtk",
+              "pitch": 24,
+              "startStep": 8,
+              "durationSteps": 2,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwui9kfy-0-tbp",
+              "pitch": 24,
+              "startStep": 12,
+              "durationSteps": 2,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf1cq-0-ulc",
+              "pitch": 36,
+              "startStep": 3,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf481-0-zqu",
+              "pitch": 36,
+              "startStep": 4,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf4q7-0-e02",
+              "pitch": 36,
+              "startStep": 5,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf5b0-0-xus",
+              "pitch": 36,
+              "startStep": 0,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf5n5-0-st1",
+              "pitch": 36,
+              "startStep": 1,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf6jw-0-oli",
+              "pitch": 36,
+              "startStep": 8,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf6z0-0-7zq",
+              "pitch": 36,
+              "startStep": 9,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf8to-0-p3i",
+              "pitch": 36,
+              "startStep": 12,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulf96u-0-es1",
+              "pitch": 36,
+              "startStep": 13,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulilc4-0-oc9",
+              "pitch": 36,
+              "startStep": 7,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulimqz-0-pqp",
+              "pitch": 36,
+              "startStep": 11,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwuliolw-0-bs6",
+              "pitch": 36,
+              "startStep": 15,
+              "durationSteps": 1,
+              "velocity": 0.84
+            }
+          ],
+          "ch-lead": [
+            {
+              "id": "n-l1",
+              "pitch": 60,
+              "startStep": 0,
+              "durationSteps": 2.5,
+              "velocity": 0.78
+            },
+            {
+              "id": "n-l2",
+              "pitch": 67,
+              "startStep": 3,
+              "durationSteps": 2.5,
+              "velocity": 0.84
+            },
+            {
+              "id": "n-l3",
+              "pitch": 63,
+              "startStep": 6,
+              "durationSteps": 2,
+              "velocity": 0.75
+            },
+            {
+              "id": "n-l4",
+              "pitch": 70,
+              "startStep": 10,
+              "durationSteps": 2.5,
+              "velocity": 0.86
+            },
+            {
+              "id": "n-l5",
+              "pitch": 67,
+              "startStep": 13,
+              "durationSteps": 2,
+              "velocity": 0.72
+            }
+          ],
+          "ch-mwuice88-a2l": [
+            {
+              "id": "pr-mwuice89-klzq",
+              "pitch": 36,
+              "startStep": 2,
+              "durationSteps": 2,
+              "velocity": 0.88
+            },
+            {
+              "id": "pr-mwuice89-kveg",
+              "pitch": 36,
+              "startStep": 6,
+              "durationSteps": 2,
+              "velocity": 0.82
+            },
+            {
+              "id": "pr-mwuice89-dwl1",
+              "pitch": 39,
+              "startStep": 10,
+              "durationSteps": 2,
+              "velocity": 0.86
+            },
+            {
+              "id": "pr-mwuice89-8yup",
+              "pitch": 42,
+              "startStep": 14,
+              "durationSteps": 2,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwuice89-uwqq",
+              "pitch": 24,
+              "startStep": 0,
+              "durationSteps": 2,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwuice89-plxa",
+              "pitch": 24,
+              "startStep": 4,
+              "durationSteps": 2,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwuice89-2pk3",
+              "pitch": 24,
+              "startStep": 8,
+              "durationSteps": 2,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwuice89-opgy",
+              "pitch": 24,
+              "startStep": 12,
+              "durationSteps": 2,
+              "velocity": 0.84
+            }
+          ],
+          "ch-mwuicfou-nhz": [],
+          "ch-kick": [
+            {
+              "id": "pr-mwulz5dn-0-7e6",
+              "pitch": 36,
+              "startStep": 0,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulz6vn-0-qgi",
+              "pitch": 36,
+              "startStep": 4,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulz8xz-0-tqe",
+              "pitch": 36,
+              "startStep": 8,
+              "durationSteps": 1,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwulzb2b-0-3dd",
+              "pitch": 36,
+              "startStep": 12,
+              "durationSteps": 1,
+              "velocity": 0.84
+            }
+          ]
+        }
+      },
+      {
+        "id": "pat-2",
+        "name": "Pattern 2 · Fill & Arp",
+        "stepsCount": 16,
+        "steps": {
+          "ch-kick": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          "ch-bass": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "ch-lead": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "ch-pluck": [
+            true,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          "ch-mwuice88-a2l": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "ch-mwuicfou-nhz": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        },
+        "notes": {
+          "ch-bass": [
+            {
+              "id": "n-b21",
+              "pitch": 41,
+              "startStep": 2,
+              "durationSteps": 1.5,
+              "velocity": 0.9
+            },
+            {
+              "id": "n-b22",
+              "pitch": 41,
+              "startStep": 6,
+              "durationSteps": 1.5,
+              "velocity": 0.84
+            },
+            {
+              "id": "n-b23",
+              "pitch": 43,
+              "startStep": 10,
+              "durationSteps": 1.5,
+              "velocity": 0.88
+            },
+            {
+              "id": "n-b24",
+              "pitch": 48,
+              "startStep": 14,
+              "durationSteps": 1.5,
+              "velocity": 0.92
+            }
+          ],
+          "ch-lead": [
+            {
+              "id": "n-l21",
+              "pitch": 65,
+              "startStep": 0,
+              "durationSteps": 2,
+              "velocity": 0.82
+            },
+            {
+              "id": "n-l22",
+              "pitch": 72,
+              "startStep": 4,
+              "durationSteps": 2,
+              "velocity": 0.88
+            },
+            {
+              "id": "n-l23",
+              "pitch": 70,
+              "startStep": 8,
+              "durationSteps": 2,
+              "velocity": 0.82
+            },
+            {
+              "id": "n-l24",
+              "pitch": 75,
+              "startStep": 12,
+              "durationSteps": 3,
+              "velocity": 0.92
+            }
+          ],
+          "ch-mwuice88-a2l": [
+            {
+              "id": "pr-mwuice89-73wd",
+              "pitch": 41,
+              "startStep": 2,
+              "durationSteps": 1.5,
+              "velocity": 0.9
+            },
+            {
+              "id": "pr-mwuice89-8pzy",
+              "pitch": 41,
+              "startStep": 6,
+              "durationSteps": 1.5,
+              "velocity": 0.84
+            },
+            {
+              "id": "pr-mwuice89-8mq9",
+              "pitch": 43,
+              "startStep": 10,
+              "durationSteps": 1.5,
+              "velocity": 0.88
+            },
+            {
+              "id": "pr-mwuice89-yb6h",
+              "pitch": 48,
+              "startStep": 14,
+              "durationSteps": 1.5,
+              "velocity": 0.92
+            }
+          ],
+          "ch-mwuicfou-nhz": []
+        }
+      }
+    ],
+    "activePatternId": "pat-1",
+    "selectedChannelId": "ch-bass",
+    "playlistClips": [
+      {
+        "id": "clip-1",
+        "trackIndex": 0,
+        "startBar": 0,
+        "lengthBars": 1,
+        "patternId": "pat-1"
+      },
+      {
+        "id": "clip-2",
+        "trackIndex": 0,
+        "startBar": 1,
+        "lengthBars": 1,
+        "patternId": "pat-1"
+      },
+      {
+        "id": "clip-3",
+        "trackIndex": 0,
+        "startBar": 2,
+        "lengthBars": 1,
+        "patternId": "pat-1"
+      },
+      {
+        "id": "clip-4",
+        "trackIndex": 0,
+        "startBar": 3,
+        "lengthBars": 1,
+        "patternId": "pat-2"
+      }
+    ],
+    "swing": 0.08,
+    "songMode": false,
+    "totalBars": 16,
+    "masterMixer": {
+      "pan": 0.5,
+      "stereoWidth": 0.5,
+      "phaseDelayUs": 0.5,
+      "fxAmount": 1,
+      "filterPos": 0.547,
+      "filterMode": "bipolar",
+      "filterSlope": 2,
+      "filterRes": 0.14,
+      "polarityInvert": false,
+      "fxSlots": []
+    },
+    "masterMuted": false,
+    "mixerTracks": [
+      {
+        "id": "mix-trk-1",
+        "index": 1,
+        "name": "Kick",
+        "accent": "rose",
+        "volume": 0.85,
+        "muted": false,
+        "solo": false,
+        "strip": {
+          "pan": 0.5,
+          "stereoWidth": 0.5,
+          "phaseDelayUs": 0.5,
+          "fxAmount": 1,
+          "filterPos": 0.5,
+          "filterMode": "bipolar",
+          "filterSlope": 2,
+          "filterRes": 0.14,
+          "polarityInvert": false,
+          "fxSlots": []
+        },
+        "sends": [
+          {
+            "targetIndex": 0,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "mix-trk-2",
+        "index": 2,
+        "name": "Sub Bass",
+        "accent": "emerald",
+        "volume": 0.85,
+        "muted": false,
+        "solo": false,
+        "strip": {
+          "pan": 0.5,
+          "stereoWidth": 0.5,
+          "phaseDelayUs": 0.5,
+          "fxAmount": 1,
+          "filterPos": 0.5,
+          "filterMode": "bipolar",
+          "filterSlope": 2,
+          "filterRes": 0.14,
+          "polarityInvert": false,
+          "fxSlots": []
+        },
+        "sends": [
+          {
+            "targetIndex": 0,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "mix-trk-3",
+        "index": 3,
+        "name": "Lead Saw",
+        "accent": "amber",
+        "volume": 0.85,
+        "muted": false,
+        "solo": false,
+        "strip": {
+          "pan": 0.5,
+          "stereoWidth": 0.5,
+          "phaseDelayUs": 0.5,
+          "fxAmount": 1,
+          "filterPos": 0.5,
+          "filterMode": "bipolar",
+          "filterSlope": 2,
+          "filterRes": 0.14,
+          "polarityInvert": false,
+          "fxSlots": []
+        },
+        "sends": [
+          {
+            "targetIndex": 0,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "mix-trk-4",
+        "index": 4,
+        "name": "Comb Pluck",
+        "accent": "sky",
+        "volume": 0.85,
+        "muted": false,
+        "solo": false,
+        "strip": {
+          "pan": 0.5,
+          "stereoWidth": 0.5,
+          "phaseDelayUs": 0.5,
+          "fxAmount": 1,
+          "filterPos": 0.5,
+          "filterMode": "bipolar",
+          "filterSlope": 2,
+          "filterRes": 0.14,
+          "polarityInvert": false,
+          "fxSlots": []
+        },
+        "sends": [
+          {
+            "targetIndex": 0,
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "samples": []
+}
